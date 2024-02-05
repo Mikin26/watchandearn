@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "459443107222",
+    "project_id": "watchandearn-4729d",
+    "storage_bucket": "watchandearn-4729d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459443107222:android:d6dfa0c9e1acb36f3799b7",
+        "android_client_info": {
+          "package_name": "com.WatchAndEarn.watchandearn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvEFf_KI0rOMYMuiNpucOGEiV8uUQbl7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
