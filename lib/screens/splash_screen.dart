@@ -130,42 +130,43 @@ class _SplashScreen extends State<SplashScreen> {
     }
   }
   void getupdate() async{
-    final response =await http.get(Uri.parse("https://we.trionixtech.live:5600/appupdate/get")
-    );
-    final Map<String, dynamic> data = jsonDecode(response.body);
-    update1 = up.fromjson(data);
-    print(update1.result[0].AppVersion);
-    if (appVersion != update1.result[0].AppVersion){
-      showDialog(
-          context: context,
-          barrierDismissible: false, // user must tap button!
-          builder: (BuildContext context) {
-            return AlertDialog(
-              title: const Text('Update!'),
-              content: const SingleChildScrollView(
-                child: ListBody(
-                  children: <Widget>[
-                    Text('New Version is Available'),
-                    Text('Please Update to New Version'),
-                  ],
-                ),
-              ),
-              actions: <Widget>[
-                TextButton(
-                  child: const Text('Update'),
-                  onPressed: () {
-                    //launchUrl(Uri.parse(update1.result[0].AppLink));
-                    checklogin();
-                  },
-                ),
-              ],
-            );
-    }
-      );
-    }
-    else {
-      checklogin();
-    }
+    checklogin();
+    // final response =await http.get(Uri.parse("https://we.trionixtech.live:5600/appupdate/get")
+    // );
+    // //final Map<String, dynamic> data = jsonDecode(response.body);
+    // //update1 = up.fromjson(data);
+    // print(update1.result[0].AppVersion);
+    // if (appVersion != update1.result[0].AppVersion){
+    //   showDialog(
+    //       context: context,
+    //       barrierDismissible: false, // user must tap button!
+    //       builder: (BuildContext context) {
+    //         return AlertDialog(
+    //           title: const Text('Update!'),
+    //           content: const SingleChildScrollView(
+    //             child: ListBody(
+    //               children: <Widget>[
+    //                 Text('New Version is Available'),
+    //                 Text('Please Update to New Version'),
+    //               ],
+    //             ),
+    //           ),
+    //           actions: <Widget>[
+    //             TextButton(
+    //               child: const Text('Update'),
+    //               onPressed: () {
+    //                 //launchUrl(Uri.parse(update1.result[0].AppLink));
+    //                 checklogin();
+    //               },
+    //             ),
+    //           ],
+    //         );
+    // }
+    //   );
+
+    // else {
+    //   checklogin();
+    // }
   }
   void showSnackBar(String text) {
     if (this.mounted) {
